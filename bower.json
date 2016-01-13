@@ -1,0 +1,17 @@
+{
+  "name": "map-data-d3",
+  "homepage": "https://github.com/VadimDez/map-data-d3",
+  "authors": [
+    "Vadym Yatsyuk <vasp3d@gmail.com>"
+  ],
+  "description": "d3 project",
+  "main": "js/app.js",
+  "moduleType": [],
+  "keywords": [
+    "d3"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "d3": "~3.5.12"
+  }
+}
