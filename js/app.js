@@ -53,8 +53,8 @@
         //yeild: 15000,
         //significance: 'First dry fusion fuel "staged" thermonuclear weapon; a serious nuclear fallout accident occurred',
         date: object.properties.year,
-        latitude: object.geometry.coordinates[0],
-        longitude: object.geometry.coordinates[1]
+        latitude: object.geometry.coordinates[1],
+        longitude: object.geometry.coordinates[0]
       }
     })
   }
