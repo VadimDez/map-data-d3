@@ -36,22 +36,21 @@
       geographyConfig: {
         highlightOnHover: false,
         popupOnHover: false
+      },
+      bubblesConfig: {
+        fillOpacity: 0.7
       }
     });
   }
 
   function getPoints(data) {
     return data.map(function (object) {
-      console.log(object.geometry);
-
       if (!object.geometry) {
         return false;
       }
       return {
         name: object.properties.name,
-        radius: 10,//object.properties.mass,
-        //yeild: 15000,
-        //significance: 'First dry fusion fuel "staged" thermonuclear weapon; a serious nuclear fallout accident occurred',
+        radius: 10,
         date: object.properties.year,
         latitude: object.geometry.coordinates[1],
         longitude: object.geometry.coordinates[0]
