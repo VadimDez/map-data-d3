@@ -12,6 +12,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "d3": "~3.5.12"
+    "d3": "~3.5.12",
+    "datamaps": "~0.4.3",
+    "topojson": "~1.6.19"
   }
 }
