@@ -37,6 +37,10 @@
       },
       bubblesConfig: {
         fillOpacity: 0.7
+      },
+      fills: {
+        defaultFill: '#00A896',
+        1: '#000000'
       }
     });
   }
@@ -49,10 +53,12 @@
       return {
         name: object.properties.name,
         fall: object.properties.fall,
+        mass: object.properties.mass,
         recclass: object.properties.recclass,
         reclat: object.properties.reclat,
         nametype: object.properties.nametype,
-        radius: 10,
+        radius: getRadius(object.properties.mass), //object.properties.mass / 200000,
+        fillKey: '1',
         date: object.properties.year,
         latitude: object.geometry.coordinates[1],
         longitude: object.geometry.coordinates[0]
@@ -67,5 +73,22 @@
     }
 
     return '<div class="hoverinfo">' + info + '</div>'
+  }
+
+  function getRadius(mass) {
+    // to make it more or less similar to requested...
+    if (mass < 100000) {
+      return 2;
+    }
+    if (mass < 500000) {
+      return 10;
+    }
+    if (mass < 4000000) {
+      return 30;
+    }
+    if (mass < 20000000) {
+      return 40;
+    }
+    return 50;
   }
 }());
