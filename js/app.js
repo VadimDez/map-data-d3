@@ -36,7 +36,8 @@
         popupOnHover: false
       },
       bubblesConfig: {
-        fillOpacity: 0.7
+        fillOpacity: 0.7,
+        borderWidth: 1
       },
       fills: {
         defaultFill: '#00A896',
@@ -78,7 +79,7 @@
   function getRadius(mass) {
     // to make it more or less similar to requested...
     if (mass < 100000) {
-      return 2;
+      return 3;
     }
     if (mass < 500000) {
       return 10;
